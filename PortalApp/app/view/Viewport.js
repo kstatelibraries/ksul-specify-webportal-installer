@@ -271,12 +271,12 @@ Ext.define('SpWebPortal.view.Viewport', {
 			layout: 'accordion',
 			items: [
 			    {
-				xtype: 'spexpresssrch',
-				id: 'spwpmainexpresssrch'
-			    },
-			    {
 				xtype: 'spadvsrch',
 				id: 'spwpmainadvsrch'
+			    },
+			    {
+				xtype: 'spexpresssrch',
+				id: 'spwpmainexpresssrch'
 			    }
 			]
 		    }
