@@ -6,7 +6,7 @@
 
 
 
-FROM ubuntu:20.04 as specify_base_ubuntu
+FROM ubuntu:20.04 AS specify_base_ubuntu
 
 LABEL maintainer="Specify Collections Consortium <github.com/specify>"
 
@@ -26,14 +26,14 @@ RUN apt-get update && apt-get -y install \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-FROM specify_base_ubuntu as webportal
+FROM specify_base_ubuntu AS webportal
 
 # Get Web Portal
 COPY . /home/specify/webportal-installer
 WORKDIR /home/specify/webportal-installer/
 
 # Build the Solr app
-RUN cd /home/specify/webportal-installer/  && make clean-all && make build-all
+RUN cd /home/specify/webportal-installer/  && make clean-all && make build-all && make build-html
 
 # Run Solr in foreground
 # Give Solr time to get up and running

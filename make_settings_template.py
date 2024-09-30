@@ -28,6 +28,7 @@ USER_EDITABLE_SETTINGS = [
     'imageViewSize',
     'imagePreviewSize',
     'imageViewSize',
+    'imageBaseUrl',
     'backgroundURL',
     'bannerURL',
     'bannerTitle',
