@@ -58,4 +58,6 @@ full_settings.update({
 
 settings[0].update(full_settings)
 
+settings[0].update(custom_settings)
+
 print json.dumps(settings, indent=2)
